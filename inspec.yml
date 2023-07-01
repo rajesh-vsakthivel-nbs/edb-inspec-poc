@@ -1,0 +1,9 @@
+name: inspec-k8s-sample
+title: InSpec K8s Profile
+maintainer: Brad Geesaman
+copyright: Brad Geesaman
+license: Apache-2.0
+summary: An Example K8s Chef InSpec Compliance Profile
+version: 0.1.0
+supports:
+  platform: k8s
