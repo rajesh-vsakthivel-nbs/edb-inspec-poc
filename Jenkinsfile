@@ -83,35 +83,7 @@ pipeline {
 
         stages {
 
-          stage('Prepare') {
-
-                steps {
-                    script {
-                    container('test') {
-                      withCredentials([
-                      string(credentialsId: 'npm_token', variable: 'NPM_TOKEN')
-                      ]) {
-
-                        sh """
-                        cp .npmrc-CI .npmrc
-
-
-                        mkdir -p /BDD/wrk
-                        mkdir -p reports/BDD
-                        mkdir -p test/reports/json-results
-                        ls -lart
-
-                         echo "Starting the NPM test ... "
-                         npm install
-
-                        """
-                    }
-                    }
-                    }
-                }
-
-           } //End of stage
-
+          
 
            stage('Run Tests') {
 
@@ -126,25 +98,11 @@ pipeline {
                            ]) {
 
                              sh '''
-                             export NODE_OPTIONS=--max-old-space-size=8192
-                             npm run ${npmRunCmd} -- --serverUrls.environment=${testEnvironment}
-                             cp -r test/reports/json-results ${WORKSPACE}
-                             cp -a test/reports/json-results/. ${WORKSPACE}/reports/BDD
+                             inspec exec basics.rb
 
                              '''
 
                          }
-                       }
-                       finally {
-                         //cucumber fileIncludePattern: 'reports/*.json'
-                         archiveArtifacts  'test/reports/**'
-                         publishHTML (target : [allowMissing: false,
-                                       alwaysLinkToLastBuild: true,
-                                       keepAll: true,
-                                       reportDir: 'test/reports',
-                                       reportFiles: 'index.html',
-                                       reportName: 'Test Reports',
-                                       reportTitles: 'Test Report'])
                        }
                      }
                      }
