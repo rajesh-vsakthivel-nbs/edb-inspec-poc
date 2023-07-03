@@ -105,8 +105,6 @@ pipeline {
                              inspec
                              cd root
                              ls
-                             cd .kube
-                             cat /root/.kube/config
                              inspec exec . -t k8s://
 
                              '''
