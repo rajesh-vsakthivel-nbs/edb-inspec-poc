@@ -53,8 +53,6 @@ pipeline {
                         - mountPath: /tmp
                           name: temp-volume
                       volumes:
-                      - name: temp-volume
-                        emptyDir: {}
                       - name: ccoe-aws-cert
                         secret:
                           secretName: ccoe-aws-cert
