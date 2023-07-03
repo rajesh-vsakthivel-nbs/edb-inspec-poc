@@ -1,70 +1,72 @@
-
-
-
-
 pipeline {
 
 
         agent {
             kubernetes {
-
-                cloud 'kubernetes-edbhub-dev'
-                yaml """\
-                apiVersion: v1
-                kind: Pod
-                metadata:
-                  annotations:
-                    cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
-                spec:
-                  nodeSelector:
-                    cbjAgent: true
-                  tolerations:
-                  - key: "cbjAgent"
-                    operator: "Equal"
-                    value: "true"
-                    effect: "NoSchedule"
-                  serviceAccountName: "jenkins"
-                  containers:
-                  - name: jnlp
-                    image: ccoe-docker.artifactory.aws.nbscloud.co.uk/cloudbees-core-agent:1.18.0
-                    resources:
-                      requests:
-                        memory: "500Mi"
-                        cpu: "100m"
-                      limits:
-                        memory: "4Gi"
-                        cpu: "2"
-                  - name: test
-                     image: edb-docker-dev-local.artifactory.aws.nbscloud.co.uk/pace-test/edbchefinspec:5.22.3
-                    command:
-                    - sleep
-                    args:
-                    - 99d
-                    resources:
-                      requests:
-                        memory: "4Gi"
-                        cpu: "2"
-                      limits:
-                        memory: "12Gi"
-                        cpu: "8"
-                    volumeMounts:
-                    - mountPath: /tmp
-                      name: temp-volume
-                  volumes:
-                  - name: temp-volume
-                    emptyDir: {}
-                  - name: ccoe-aws-cert
-                    secret:
-                      secretName: ccoe-aws-cert
-                  - name: jenkins-docker-cfg
-                    projected:
-                      sources:
-                      - secret:
-                          name: artifactory-docker
-                          items:
-                            - key: .dockerconfigjson
-                              path: config.json
-            """.stripIndent()
+            cloud 'kubernetes-edbhub-dev'
+            yaml """\
+                    apiVersion: v1
+                    kind: Pod
+                    metadata:
+                      annotations:
+                        cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+                    spec:
+                      nodeSelector:
+                        cbjAgent: true
+                      tolerations:
+                      - key: "cbjAgent"
+                        operator: "Equal"
+                        value: "true"
+                        effect: "NoSchedule"
+                      serviceAccountName: "jenkins"
+                      initContainers:
+                      - name: wait-for-jenkins-connection
+                        image: cicd-docker-prod.artifactory.aws.nbscloud.co.uk/cicd-cloudbees-core-agent:v0.1.1
+                        imagePullPolicy: IfNotPresent
+                        command: ["/bin/sh", "-c"]
+                        args: ["counter=0; while [ \$counter -lt 30 ] && [ \$(curl -sw '%{http_code}' '${env.JENKINS_URL}' -o /dev/null) -eq 000 ]; do sleep 1; echo 'Waiting for jenkins connection ...'; counter=\$((counter+1)); done"]
+                      containers:
+                      - name: jnlp
+                        image: cicd-docker-prod.artifactory.aws.nbscloud.co.uk/cicd-cloudbees-core-agent:v0.1.1
+                        imagePullPolicy: IfNotPresent
+                        resources:
+                          requests:
+                            memory: "500Mi"
+                            cpu: "100m"
+                          limits:
+                            memory: "4Gi"
+                            cpu: "2"
+                      - name: test
+                        image: edb-docker-dev-local.artifactory.aws.nbscloud.co.uk/pace-test/edbchefinspec:5.22.3
+                        command:
+                        - sleep
+                        args:
+                        - 99d
+                        resources:
+                          requests:
+                            memory: "6Gi"
+                            cpu: "2"
+                          limits:
+                            memory: "12Gi"
+                            cpu: "4"
+                        volumeMounts:
+                        - mountPath: /tmp
+                          name: temp-volume
+                      volumes:
+                      - name: temp-volume
+                        emptyDir: {}
+                      - name: ccoe-aws-cert
+                        secret:
+                          secretName: ccoe-aws-cert
+                      - name: jenkins-docker-cfg
+                        projected:
+                          sources:
+                          - secret:
+                              name: artifactory-docker
+                              items:
+                                - key: .dockerconfigjson
+                                  path: config.json
+                """.stripIndent()
             }
         }
 
