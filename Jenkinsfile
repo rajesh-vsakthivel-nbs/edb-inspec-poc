@@ -104,6 +104,7 @@ pipeline {
                              inspec
                              cd /root
                              ls
+                             cat /root/.aws/config
                              inspec exec . -t k8s://
 
                              '''
