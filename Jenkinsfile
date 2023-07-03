@@ -92,7 +92,7 @@ pipeline {
                            usernamePassword(credentialsId: 'cco_browserstack_creds', usernameVariable: 'BROWSERSTACK_USER_NAME', passwordVariable: 'BROWSERSTACK_KEY')
                            ]) {
                             
-                             kubectl
+                            
                              sh '''
                              pwd
                              ls
@@ -106,7 +106,7 @@ pipeline {
                              cd /root
                              ls
                              cat /root/.aws/config
-                             
+                             kubectl 
                              inspec exec . -t k8s://
 
                              '''
