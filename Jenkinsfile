@@ -49,9 +49,6 @@ pipeline {
                           limits:
                             memory: "12Gi"
                             cpu: "4"
-                        volumeMounts:
-                        - mountPath: /tmp
-                          name: temp-volume
                       volumes:
                       - name: ccoe-aws-cert
                         secret:
