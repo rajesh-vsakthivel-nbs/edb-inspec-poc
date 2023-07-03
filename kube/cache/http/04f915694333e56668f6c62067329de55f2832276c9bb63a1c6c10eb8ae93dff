@@ -1,0 +1,10 @@
+oùgÜ $ÑqÔqô¿Ò\ 2¸ÇöDsb~ú∫ŒáHTTP/2.0 200 OK
+Content-Length: 1409
+Audit-Id: d2406bdf-fb02-42c4-8ce6-f1640fb51c7c
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"security.istio.io/v1beta1","resources":[{"name":"requestauthentications","singularName":"requestauthentication","namespaced":true,"kind":"RequestAuthentication","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["ra"],"categories":["istio-io","security-istio-io"],"storageVersionHash":"mr+dytYVwr8="},{"name":"requestauthentications/status","singularName":"","namespaced":true,"kind":"RequestAuthentication","verbs":["get","patch","update"]},{"name":"authorizationpolicies","singularName":"authorizationpolicy","namespaced":true,"kind":"AuthorizationPolicy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["istio-io","security-istio-io"],"storageVersionHash":"djwd/cy0e/E="},{"name":"authorizationpolicies/status","singularName":"","namespaced":true,"kind":"AuthorizationPolicy","verbs":["get","patch","update"]},{"name":"peerauthentications","singularName":"peerauthentication","namespaced":true,"kind":"PeerAuthentication","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["pa"],"categories":["istio-io","security-istio-io"],"storageVersionHash":"0IW8zQBF4Qc="},{"name":"peerauthentications/status","singularName":"","namespaced":true,"kind":"PeerAuthentication","verbs":["get","patch","update"]}]}

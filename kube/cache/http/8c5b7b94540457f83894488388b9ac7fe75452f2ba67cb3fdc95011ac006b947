@@ -1,0 +1,11 @@
+Q!-\Ð|1‘§6†ws!èeÈ
+´ZMûÄç)pHTTP/2.0 200 OK
+Content-Length: 1091
+Audit-Id: 7eabe746-b071-4f6e-9bb4-b013fdd5b059
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"mutations.gatekeeper.sh/v1alpha1","resources":[{"name":"assign","singularName":"assign","namespaced":false,"kind":"Assign","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"3eMaBUWRSco="},{"name":"assign/status","singularName":"","namespaced":false,"kind":"Assign","verbs":["get","patch","update"]},{"name":"modifyset","singularName":"modifyset","namespaced":false,"kind":"ModifySet","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"7dUiKE1C/ls="},{"name":"modifyset/status","singularName":"","namespaced":false,"kind":"ModifySet","verbs":["get","patch","update"]},{"name":"assignmetadata","singularName":"assignmetadata","namespaced":false,"kind":"AssignMetadata","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"j8IvK0jzm7M="},{"name":"assignmetadata/status","singularName":"","namespaced":false,"kind":"AssignMetadata","verbs":["get","patch","update"]}]}

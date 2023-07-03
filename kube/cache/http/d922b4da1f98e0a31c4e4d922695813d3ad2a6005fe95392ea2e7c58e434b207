@@ -1,0 +1,10 @@
+;uÌ”Á¤ÊøÃYã#OC—†Ä;ô˜ç3<·’5»ªRHTTP/2.0 200 OK
+Content-Length: 721
+Audit-Id: a9a997b5-d4e9-41e3-9015-411773193860
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"appprotect.f5.com/v1beta1","resources":[{"name":"appolicies","singularName":"appolicy","namespaced":true,"kind":"APPolicy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"/ANGQ+zFDyI="},{"name":"apusersigs","singularName":"apusersig","namespaced":true,"kind":"APUserSig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"BqWVU8a6pCA="},{"name":"aplogconfs","singularName":"aplogconf","namespaced":true,"kind":"APLogConf","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"cYXaGlijJEI="}]}

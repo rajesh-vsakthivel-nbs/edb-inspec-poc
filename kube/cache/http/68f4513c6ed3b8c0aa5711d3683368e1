@@ -1,0 +1,8 @@
+HTTP/2.0 200 OK
+Content-Length: 847
+Audit-Id: 0cdd7eaf-e47a-44a0-a40b-e392a5e2def1
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Fri, 19 Aug 2022 10:56:26 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"operator.ibm.com/v1alpha1","resources":[{"name":"ibmlicenseservicereporters","singularName":"ibmlicenseservicereporter","namespaced":true,"kind":"IBMLicenseServiceReporter","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"Cj+bxI9+QJg="},{"name":"ibmlicenseservicereporters/status","singularName":"","namespaced":true,"kind":"IBMLicenseServiceReporter","verbs":["get","patch","update"]},{"name":"ibmlicensings","singularName":"ibmlicensing","namespaced":false,"kind":"IBMLicensing","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"IR3UrghDeeE="},{"name":"ibmlicensings/status","singularName":"","namespaced":false,"kind":"IBMLicensing","verbs":["get","patch","update"]}]}

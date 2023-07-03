@@ -1,0 +1,10 @@
+Ñlô5ÔÊÆ*Úêh∏‘Zâ–N'ëƒ\¡¶NQËHTTP/2.0 200 OK
+Content-Length: 304
+Audit-Id: 149cb605-7b9b-4366-9e23-b53e9fb52e3d
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"config.gatekeeper.sh/v1alpha1","resources":[{"name":"configs","singularName":"config","namespaced":true,"kind":"Config","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"H3fzJiLhVn8="}]}

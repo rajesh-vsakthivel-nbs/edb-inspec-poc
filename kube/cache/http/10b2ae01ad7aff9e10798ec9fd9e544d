@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 987
+Audit-Id: 0b728d9d-8046-4fb8-8b49-6addcb3d682b
+Content-Type: application/json
+Date: Wed, 27 Oct 2021 15:59:50 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"certmanager.k8s.io/v1alpha1","resources":[{"name":"certificates","singularName":"certificate","namespaced":true,"kind":"Certificate","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["cert","certs"]},{"name":"issuers","singularName":"issuer","namespaced":true,"kind":"Issuer","verbs":["delete","deletecollection","get","list","patch","create","update","watch"]},{"name":"challenges","singularName":"challenge","namespaced":true,"kind":"Challenge","verbs":["delete","deletecollection","get","list","patch","create","update","watch"]},{"name":"clusterissuers","singularName":"clusterissuer","namespaced":false,"kind":"ClusterIssuer","verbs":["delete","deletecollection","get","list","patch","create","update","watch"]},{"name":"orders","singularName":"order","namespaced":true,"kind":"Order","verbs":["delete","deletecollection","get","list","patch","create","update","watch"]}]}

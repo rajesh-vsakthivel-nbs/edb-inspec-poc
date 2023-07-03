@@ -1,0 +1,12 @@
+ß(îóŒÅÍXû·T¦iõÐˆãLöæ
+¥V®Œ
+Ñ‚¢7÷HTTP/2.0 200 OK
+Content-Length: 795
+Audit-Id: 612643f9-2e2a-443a-ac5d-52d195dde5d5
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"appprotectdos.f5.com/v1beta1","resources":[{"name":"dosprotectedresources","singularName":"dosprotectedresource","namespaced":true,"kind":"DosProtectedResource","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["pr"],"storageVersionHash":"JnhTJ0nzGWU="},{"name":"apdoslogconfs","singularName":"apdoslogconf","namespaced":true,"kind":"APDosLogConf","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"Xf4yJpT4HhA="},{"name":"apdospolicies","singularName":"apdospolicy","namespaced":true,"kind":"APDosPolicy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"2L7cdkD8fuo="}]}
