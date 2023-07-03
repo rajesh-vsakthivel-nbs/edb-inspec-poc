@@ -96,7 +96,7 @@ pipeline {
                              pwd
                              ls
                           
-                             mkdir /root/.aws
+                           
                              cp -a /home/jenkins/agent/workspace/CCO/ACTIVE_JOBS/Test-Jobs/adhoc-regression-tests-applicationCreationUtility/kube/* /root/.kube/
                              cp -a /home/jenkins/agent/workspace/CCO/ACTIVE_JOBS/Test-Jobs/adhoc-regression-tests-applicationCreationUtility/aws/* /root/.aws/
                              cd /
