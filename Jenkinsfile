@@ -102,6 +102,7 @@ pipeline {
                              ls
                              cd /
                              ls
+                             inspec
                              cd root
                              ls
                              cd .kube
