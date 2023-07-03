@@ -1,0 +1,27 @@
+[default]
+azure_tenant_id=18ed93f5-e470-4996-b0ef-9554af985d50
+azure_app_id_uri=https://signin.aws.amazon.com/saml
+azure_default_username=rajesh.venugopalsakthivel@nationwide.co.uk
+azure_default_role_arn=
+azure_default_duration_hours=12
+azure_default_remember_me=true
+cli_pager=
+
+[profile nbs-edbhub-dev-read]
+region=eu-west-2
+source_profile=default
+role_arn=arn:aws:iam::329579721377:role/nbs-edbhub-dev-role-read-only
+cli_pager=
+
+[profile nbs-edbhub-dev-app-creator]
+region=eu-west-2
+source_profile=default
+role_arn=arn:aws:iam::329579721377:role/nbs-edbhub-dev-role-spoke-cicd
+cli_pager=
+
+
+[profile nbs-edbhub-dev-eks-executor]
+region=eu-west-2
+source_profile=default
+role_arn=arn:aws:iam::329579721377:role/nbs-edbhub-dev-eks-executor
+cli_pager=
