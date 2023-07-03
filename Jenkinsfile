@@ -96,7 +96,7 @@ pipeline {
                              pwd
                              ls
                              mkdir /root/.kube/
-                             cp /kube /root/.kube/
+                             cp -a /kube/. /root/.kube/
                              cd /
                              ls
                              inspec
