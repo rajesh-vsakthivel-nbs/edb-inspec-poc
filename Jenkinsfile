@@ -105,6 +105,7 @@ pipeline {
                              cd /root
                              ls
                              cat /root/.aws/config
+                             kubectl
                              inspec exec . -t k8s://
 
                              '''
