@@ -95,7 +95,7 @@ pipeline {
                              sh '''
                              pwd
                              ls
-                             mkdir /root/.kube/
+                        
                              cp -a /kube/. /root/.kube/
                              cd /
                              ls
