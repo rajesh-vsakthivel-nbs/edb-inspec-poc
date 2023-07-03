@@ -103,6 +103,9 @@ pipeline {
                              '''
 
                          }
+                       } catch (e)
+                       {
+                        
                        }
                      }
                      }
