@@ -98,6 +98,9 @@ pipeline {
                            ]) {
 
                              sh '''
+                             pwd
+                             ls
+                             cat /root/.kube/config
                              inspec exec . -t k8s://
 
                              '''
