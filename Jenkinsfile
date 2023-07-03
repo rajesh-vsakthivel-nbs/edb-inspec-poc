@@ -98,14 +98,14 @@ pipeline {
                            ]) {
 
                              sh '''
-                             inspec exec basics.rb
+                             inspec exec . -t k8s://
 
                              '''
 
                          }
                        } catch (e)
                        {
-                        
+
                        }
                      }
                      }

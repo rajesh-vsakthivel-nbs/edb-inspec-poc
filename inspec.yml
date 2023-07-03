@@ -1,9 +1,10 @@
-name: inspec-k8s-sample
+name: inspec-k8s
 title: InSpec K8s Profile
-maintainer: Brad Geesaman
-copyright: Brad Geesaman
+maintainer: Rajesh
+copyright: Rajesh
 license: Apache-2.0
-summary: An Example K8s Chef InSpec Compliance Profile
+summary: An InSpec Kubernetes Resource Pack
 version: 0.1.0
+inspec_version: '>= 3.0.0'
 supports:
   platform: k8s
