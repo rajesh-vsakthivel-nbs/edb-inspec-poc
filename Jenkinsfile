@@ -102,7 +102,7 @@ pipeline {
                              cd /
                              ls
                              inspec
-                             cd root
+                             cd /root
                              ls
                              inspec exec . -t k8s://
 
