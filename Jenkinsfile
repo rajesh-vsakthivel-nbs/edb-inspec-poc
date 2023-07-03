@@ -1,12 +1,15 @@
-def BUILDSTATUS = 'INITIALVALUE'
+
+
+
+
 pipeline {
 
 
-    agent {
-        kubernetes {
+        agent {
+            kubernetes {
 
-            cloud 'kubernetes-edbhub-dev'
-            yaml """\
+                cloud 'kubernetes-edbhub-dev'
+                yaml """\
                 apiVersion: v1
                 kind: Pod
                 metadata:
@@ -32,7 +35,7 @@ pipeline {
                         memory: "4Gi"
                         cpu: "2"
                   - name: test
-                    image: edb-docker-dev-local.artifactory.aws.nbscloud.co.uk/pace-test/edbchefinspec:5.22.3
+                     image: edb-docker-dev-local.artifactory.aws.nbscloud.co.uk/pace-test/edbchefinspec:5.22.3
                     command:
                     - sleep
                     args:
@@ -62,35 +65,92 @@ pipeline {
                             - key: .dockerconfigjson
                               path: config.json
             """.stripIndent()
+            }
         }
-    }
 
-    stages {
-       
- stage('Run Tests') {
 
-            steps {
-                script {
+        // parameters {
+        //
+        //
+        //   choice(name:'npmRunCmd', choices:['smokeTest'])
+        //   choice(name:'maxInstances', choices:['26','13','1'], description: 'Number of instances to run')
+        //   choice(name:'testEnvironment', choices:['dev','sit','pre'],description: 'Choose the targer environment to run tests')
+        //   string(name:'testTags', defaultValue: '@smoketest',  description: 'Enter test tag (Eg, @smoketest)')
+        //  }
+
+
+        stages {
+
+          stage('Prepare') {
+
+                steps {
+                    script {
                     container('test') {
-                        withCredentials([
-                                string(credentialsId: 'npm_token', variable: 'NPM_TOKEN')
-                        ]) {
+                      withCredentials([
+                      string(credentialsId: 'npm_token', variable: 'NPM_TOKEN')
+                      ]) {
 
-                            sh  """
-                          
-                                 echo "inspec Rajesh ... "
-                                 inspec --chef-license=accept-silent
-                                 inspec exec examples/profile/controls/kubernetespods.rb -t k8s://
-                            
-                             
+                        sh """
+                        cp .npmrc-CI .npmrc
 
-                                """
-                        }
+
+                        mkdir -p /BDD/wrk
+                        mkdir -p reports/BDD
+                        mkdir -p test/reports/json-results
+                        ls -lart
+
+                         echo "Starting the NPM test ... "
+                         npm install
+
+                        """
+                    }
+                    }
                     }
                 }
-            }
 
-        } //End of Lint Check stage
-        
-    }
+           } //End of stage
+
+
+           stage('Run Tests') {
+
+                 steps {
+                     script {
+                     container('test') {
+                           try {
+                           withCredentials([
+                           string(credentialsId: 'npm_token', variable: 'NPM_TOKEN'),
+                           string(credentialsId: 'cco_notprod_mongo_connection', variable: 'MONGO_CONNECTION_STRING'),
+                           usernamePassword(credentialsId: 'cco_browserstack_creds', usernameVariable: 'BROWSERSTACK_USER_NAME', passwordVariable: 'BROWSERSTACK_KEY')
+                           ]) {
+
+                             sh '''
+                             export NODE_OPTIONS=--max-old-space-size=8192
+                             npm run ${npmRunCmd} -- --serverUrls.environment=${testEnvironment}
+                             cp -r test/reports/json-results ${WORKSPACE}
+                             cp -a test/reports/json-results/. ${WORKSPACE}/reports/BDD
+
+                             '''
+
+                         }
+                       }
+                       finally {
+                         //cucumber fileIncludePattern: 'reports/*.json'
+                         archiveArtifacts  'test/reports/**'
+                         publishHTML (target : [allowMissing: false,
+                                       alwaysLinkToLastBuild: true,
+                                       keepAll: true,
+                                       reportDir: 'test/reports',
+                                       reportFiles: 'index.html',
+                                       reportName: 'Test Reports',
+                                       reportTitles: 'Test Report'])
+                       }
+                     }
+                     }
+                 }
+
+            } //End of stage
+
+
+}
+
 }
