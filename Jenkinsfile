@@ -82,7 +82,7 @@ pipeline {
                         ]) {
 
                             sh """
-                                kubectl exec -i eo-web-lao-77569dcd86-5vrrz -n banking-lao-dev1 sh
+                                kubectl get pods --namespace banking-lao-dev1
 
                         """
                         }
