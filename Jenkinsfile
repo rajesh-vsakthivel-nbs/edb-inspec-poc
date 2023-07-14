@@ -51,7 +51,7 @@ pipeline {
                             memory: "12Gi"
                             cpu: "4"
                         volumeMounts:
-                        - mountPath: '/root/.kube/'
+                        - mountPath: '/root/.kube'
                           name: kube-volume
                       volumes:
                       - name: kube-volume
