@@ -39,6 +39,7 @@ pipeline {
                             cpu: "2"
                       - name: test
                         image: edb-docker-dev-local.artifactory.aws.nbscloud.co.uk/pace-test/chefinspec:1.0.0
+                        args:["-v ~/.kube:/root/.kube"]
                         command:
                         - sleep
                         args:
