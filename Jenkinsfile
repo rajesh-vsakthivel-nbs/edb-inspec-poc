@@ -51,10 +51,10 @@ pipeline {
                             memory: "12Gi"
                             cpu: "4"
                         volumeMounts:
-                        - mountPath: /root/.kube
-                          name: temp-volume
+                        - mountPath: '/root/.kube/'
+                          name: kube-volume
                       volumes:
-                      - name: temp-volume
+                      - name: kube-volume
                         emptyDir: {}
                       - name: ccoe-aws-cert
                         secret:
@@ -82,7 +82,6 @@ pipeline {
                         ]) {
 
                             sh """
-                            docker 
                                 pwd
                                 cd /
                                 pwd
