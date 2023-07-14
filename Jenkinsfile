@@ -83,6 +83,8 @@ pipeline {
 
                             sh """
                                 pwd
+                                cd /
+                                pwd
                                 kubectl get pods --namespace banking-lao-dev1
                                 inspec
                                 cat /root/.kube/config
