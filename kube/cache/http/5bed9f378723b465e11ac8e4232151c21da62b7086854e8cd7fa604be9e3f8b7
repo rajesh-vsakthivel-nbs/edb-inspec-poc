@@ -1,0 +1,10 @@
+®ºÆÒßﬂÅ¥˘Ñt=‚]*Éíu^Ë˝£AﬁH¥¥±HTTP/2.0 200 OK
+Content-Length: 468
+Audit-Id: d23dfbc7-a482-4b34-8bd1-48934470ae94
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"elbv2.k8s.aws/v1alpha1","resources":[{"name":"targetgroupbindings","singularName":"targetgroupbinding","namespaced":true,"kind":"TargetGroupBinding","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"OpZmjWplpGA="},{"name":"targetgroupbindings/status","singularName":"","namespaced":true,"kind":"TargetGroupBinding","verbs":["get","patch","update"]}]}

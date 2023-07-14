@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 134
+Audit-Id: 26b3d0d1-f3e5-4998-8bf9-8f11f3fba547
+Content-Type: application/json
+Date: Wed, 27 Oct 2021 15:59:50 GMT
+
+{"kind":"APIVersions","versions":["v1"],"serverAddressByClientCIDRs":[{"clientCIDR":"0.0.0.0/0","serverAddress":"172.18.0.201:443"}]}

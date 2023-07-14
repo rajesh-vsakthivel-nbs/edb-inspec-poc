@@ -1,0 +1,10 @@
+Å7˚Tpc`HÓcùäj≈3ÙÊ9#±keExÿ`dHTTP/2.0 200 OK
+Content-Length: 834
+Audit-Id: 4f922c49-6cc4-48a7-a6fc-1c0c835bb142
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"status.gatekeeper.sh/v1beta1","resources":[{"name":"constrainttemplatepodstatuses","singularName":"constrainttemplatepodstatus","namespaced":true,"kind":"ConstraintTemplatePodStatus","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"+DJ0NWc6Akc="},{"name":"mutatorpodstatuses","singularName":"mutatorpodstatus","namespaced":true,"kind":"MutatorPodStatus","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"hkh0rbrHbB8="},{"name":"constraintpodstatuses","singularName":"constraintpodstatus","namespaced":true,"kind":"ConstraintPodStatus","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"50rQw0tnefI="}]}

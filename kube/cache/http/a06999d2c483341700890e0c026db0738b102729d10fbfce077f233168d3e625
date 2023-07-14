@@ -1,0 +1,10 @@
+Û<·ë[¥$}R|-ÄäÂð(nx=ŒžN½¢ÆHTTP/2.0 200 OK
+Content-Length: 1812
+Audit-Id: 4b4ca865-20bf-49e0-b6da-2ca2fcf25780
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"monitoring.coreos.com/v1","resources":[{"name":"prometheusrules","singularName":"prometheusrule","namespaced":true,"kind":"PrometheusRule","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"RSJ8iG+KDOo="},{"name":"thanosrulers","singularName":"thanosruler","namespaced":true,"kind":"ThanosRuler","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"YBxpg/kA6UI="},{"name":"podmonitors","singularName":"podmonitor","namespaced":true,"kind":"PodMonitor","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"t6BHpUAzPig="},{"name":"servicemonitors","singularName":"servicemonitor","namespaced":true,"kind":"ServiceMonitor","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"JLhPcfa+5xE="},{"name":"alertmanagers","singularName":"alertmanager","namespaced":true,"kind":"Alertmanager","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"NshW3zg1K7o="},{"name":"probes","singularName":"probe","namespaced":true,"kind":"Probe","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"x4d99qNb5YI="},{"name":"prometheuses","singularName":"prometheus","namespaced":true,"kind":"Prometheus","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"C8naPY4eojU="}]}

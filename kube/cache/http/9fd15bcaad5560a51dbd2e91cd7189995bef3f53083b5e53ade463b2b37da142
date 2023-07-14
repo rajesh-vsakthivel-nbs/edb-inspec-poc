@@ -1,0 +1,10 @@
+ÄŠ—÷GÚÏR¶Ì}Ó©ü¢fû(’Q*£ÿ/HTTP/2.0 200 OK
+Content-Length: 474
+Audit-Id: f726b672-7153-44f3-a3bb-df4746d29672
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"templates.gatekeeper.sh/v1","resources":[{"name":"constrainttemplates","singularName":"constrainttemplate","namespaced":false,"kind":"ConstraintTemplate","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"TJcYtHzUqRQ="},{"name":"constrainttemplates/status","singularName":"","namespaced":false,"kind":"ConstraintTemplate","verbs":["get","patch","update"]}]}

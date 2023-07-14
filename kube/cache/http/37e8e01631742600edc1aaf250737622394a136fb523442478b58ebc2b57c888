@@ -1,0 +1,10 @@
+ªü\KtÞ8m	sÅ?=‘H¼>,ö½Ä$SžÀjG8˜HTTP/2.0 200 OK
+Content-Length: 435
+Audit-Id: fa722595-f224-4a63-8fc4-fb2a37370087
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"externaldns.nginx.org/v1","resources":[{"name":"dnsendpoints","singularName":"dnsendpoint","namespaced":true,"kind":"DNSEndpoint","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"VlPE/EGoS0Q="},{"name":"dnsendpoints/status","singularName":"","namespaced":true,"kind":"DNSEndpoint","verbs":["get","patch","update"]}]}

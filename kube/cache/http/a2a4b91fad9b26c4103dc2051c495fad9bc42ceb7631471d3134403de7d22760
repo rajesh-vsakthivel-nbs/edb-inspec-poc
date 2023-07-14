@@ -1,0 +1,10 @@
+~8Ô√≥Úß‚(ùcU‹SPﬂYo7§^3Rn”åwHTTP/2.0 200 OK
+Content-Length: 950
+Audit-Id: 40d24da3-92ab-41f5-a3ed-a9dfc0b47c19
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"k8s.nginx.org/v1alpha1","resources":[{"name":"globalconfigurations","singularName":"globalconfiguration","namespaced":true,"kind":"GlobalConfiguration","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["gc"],"storageVersionHash":"94q9IdwRHm0="},{"name":"transportservers","singularName":"transportserver","namespaced":true,"kind":"TransportServer","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["ts"],"storageVersionHash":"8tQcZoC4UzM="},{"name":"transportservers/status","singularName":"","namespaced":true,"kind":"TransportServer","verbs":["get","patch","update"]},{"name":"policies","singularName":"policy","namespaced":true,"kind":"Policy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["pol"],"storageVersionHash":"zDjjoblGgbw="}]}

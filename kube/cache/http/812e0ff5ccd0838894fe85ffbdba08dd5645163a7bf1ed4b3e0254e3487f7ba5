@@ -1,0 +1,10 @@
+l=Çí	N„Ô™ÔçR5ìÂÀRMRxj··¯ðä*2IàˆHTTP/2.0 200 OK
+Content-Length: 364
+Audit-Id: 96e4e5f4-7b5d-4209-b9a7-741fbb3ce764
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"vpcresources.k8s.aws/v1beta1","resources":[{"name":"securitygrouppolicies","singularName":"securitygrouppolicy","namespaced":true,"kind":"SecurityGroupPolicy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["sgp"],"storageVersionHash":"K7924G3Qm8E="}]}

@@ -1,0 +1,10 @@
+íS%ê‚‰ΩR∑;N5"ö,–uÛìüO”Ods$Rã’HTTP/2.0 200 OK
+Content-Length: 701
+Audit-Id: 24ac308b-f73c-4dca-b7ff-3d68afc96a6d
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"elbv2.k8s.aws/v1beta1","resources":[{"name":"targetgroupbindings","singularName":"targetgroupbinding","namespaced":true,"kind":"TargetGroupBinding","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"OpZmjWplpGA="},{"name":"targetgroupbindings/status","singularName":"","namespaced":true,"kind":"TargetGroupBinding","verbs":["get","patch","update"]},{"name":"ingressclassparams","singularName":"ingressclassparams","namespaced":false,"kind":"IngressClassParams","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"yRLrPpPqI+4="}]}

@@ -1,0 +1,10 @@
+‡';â£R‹kˆ‹<h=ÎŒø¢¤5¢GŠ)ù|O³HTTP/2.0 200 OK
+Content-Length: 317
+Audit-Id: 10da79be-b82f-44f9-8588-09db2f169b68
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"externaldata.gatekeeper.sh/v1alpha1","resources":[{"name":"providers","singularName":"provider","namespaced":false,"kind":"Provider","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"gR9CHXNEygY="}]}

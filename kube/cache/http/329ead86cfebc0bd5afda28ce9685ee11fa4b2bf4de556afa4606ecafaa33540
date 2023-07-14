@@ -1,0 +1,10 @@
+¨ğ‰†Õ‰9kîQÿüGR|ÎRXó»dÇÀÑhíI«HTTP/2.0 200 OK
+Content-Length: 315
+Audit-Id: 97b2d1c9-e799-4734-877a-f3c0c9e2de06
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 14 May 2023 18:12:56 GMT
+X-Kubernetes-Pf-Flowschema-Uid: cbad9678-cd7a-4b62-bcb7-2585a4154652
+X-Kubernetes-Pf-Prioritylevel-Uid: 0af737ba-ea84-419c-80f2-b430c459dcc8
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"crd.k8s.amazonaws.com/v1alpha1","resources":[{"name":"eniconfigs","singularName":"eniconfig","namespaced":false,"kind":"ENIConfig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"Ti6zi5KT4lw="}]}
