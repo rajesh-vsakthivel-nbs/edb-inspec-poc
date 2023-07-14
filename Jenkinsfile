@@ -82,6 +82,7 @@ pipeline {
                         ]) {
 
                             sh """
+                            docker 
                                 pwd
                                 cd /
                                 pwd
