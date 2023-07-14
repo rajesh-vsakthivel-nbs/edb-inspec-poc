@@ -82,9 +82,9 @@ pipeline {
                         ]) {
 
                             sh """
-                                kubectl get pods --namespace banking-lao-dev1
-                                inspec 
                                 pwd
+                                kubectl get pods --namespace banking-lao-dev1
+                                inspec
                                 cat /root/.kube/config
                                 inspec exec --chef-license=accept-silent . -t k8s:// 
                                 kubectl -n banking-lao-dev1 exec -it eo-web-lao-77569dcd86-5vrrz  -- inspec 
