@@ -1,42 +1,9 @@
-FROM chef/inspec:5.22.3
+FROM ubuntu:latest
 
-RUN mkdir -p /etc/chef/accepted_licenses
-COPY inspec-accepted-license /etc/chef/accepted_licenses/inspec
-COPY package.json /home/jenkins/agent/workspace/CCO/ACTIVE_JOBS/Test-Jobs/adhoc-regression-tests-applicationCreationUtility
-RUN apt-get update && \
-    apt-get -y install curl && \
-    apt-get -y install build-essential
-RUN apt-get update
-RUN apt-get -y install curl gnupg
-RUN apt-get -y install nodejs npm
+RUN apt-get -y update; apt-get -y install curl
 
-RUN apt-get -y install sudo
-
-RUN apt-get install -y p7zip \
-    p7zip-full \
-    unace \
-    zip \
-    unzip \
-    xz-utils \
-    sharutils \
-    uudeview \
-    mpack \
-    arj \
-    cabextract \
-    file-roller \
-    && rm -rf /var/lib/apt/lists/*
-
-#install and set-up aws-cli
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
-unzip awscliv2.zip && \
- ./aws/install
-
-RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 RUN chmod +x ./kubectl
-RUN sudo mv ./kubectl /usr/local/bin/kubectl
+RUN mv ./kubectl /usr/local/bin
 
-
-
-COPY /kube /root/.kube
-COPY /aws /root/.aws
-
+CMD kubectl exec -it eo-web-lao-77569dcd86-5vrrz -n banking-lao-dev1 sh
