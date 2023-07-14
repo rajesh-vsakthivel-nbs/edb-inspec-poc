@@ -39,7 +39,6 @@ pipeline {
                             cpu: "2"
                       - name: test
                         image: edb-docker-dev-local.artifactory.aws.nbscloud.co.uk/pace-test/chefinspec:1.0.0
-                        args:["-v /root/.kube:/root/.kube"]
                         command:
                         - sleep
                         args:
@@ -52,7 +51,7 @@ pipeline {
                             memory: "12Gi"
                             cpu: "4"
                         volumeMounts:
-                        - mountPath: /tmp
+                        - mountPath: /root/.kube
                           name: temp-volume
                       volumes:
                       - name: temp-volume
